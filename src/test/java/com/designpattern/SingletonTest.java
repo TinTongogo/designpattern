@@ -71,6 +71,18 @@ public class SingletonTest {
         }
     }
 
+    /**
+     * 饿汉式
+     * @throws Exception
+     */
+    @Test
+    public void getSingleton_5() throws Exception {
+        Task5 task = new Task5();
+        for (int i = 0; i < 100; i++) {
+            threadPoolExecutor.execute(task);
+        }
+    }
+
     class Task1 implements Runnable {
         @Override
         public void run() {
@@ -100,6 +112,13 @@ public class SingletonTest {
         public void run() {
             Singleton4 singleton = Singleton4.getSingleton();
             singleton.say();
+        }
+    }
+
+    class Task5 implements Runnable {
+        @Override
+        public void run() {
+            Singleton5.singleton.say();
         }
     }
 }
