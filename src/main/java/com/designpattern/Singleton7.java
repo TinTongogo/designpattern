@@ -49,5 +49,4 @@ public class Singleton7 {
     public void say() {
         System.out.println("Singleton1.say : hello Singleton" + list.get(num).name + " !");
     }
-
 }

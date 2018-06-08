@@ -1,7 +1,7 @@
 package com.designpattern;
 
 /**
- * 懒汉式
+ * 枚举实现单例
  *
  * @author YYC
  * @date 2018/6/7
