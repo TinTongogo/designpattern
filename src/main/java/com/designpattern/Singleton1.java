@@ -9,7 +9,7 @@ package com.designpattern;
 public class Singleton1 {
     private static Singleton1 singleton = null;
     private Singleton1(){
-        System.out.println("生成对象》》》》》》》》》》》");
+        System.out.println("生成对象Singleton1》》》》》》》》》》》");
     }
 
     public static Singleton1 getSingleton() {
@@ -26,6 +26,6 @@ public class Singleton1 {
     }
 
     public void say(){
-        System.out.println("Singleton1.say : hello !");
+        System.out.println("Singleton1.say : hello Singleton1 !");
     }
 }

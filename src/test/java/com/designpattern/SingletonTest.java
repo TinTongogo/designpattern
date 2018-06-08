@@ -30,6 +30,7 @@ public class SingletonTest {
         for (int i = 0; i < 100; i++) {
             threadPoolExecutor.execute(task);
         }
+        Thread.sleep(1000);
     }
 
     /**
@@ -42,6 +43,7 @@ public class SingletonTest {
         for (int i = 0; i < 100; i++) {
             threadPoolExecutor.execute(task);
         }
+        Thread.sleep(1000);
     }
 
     /**
@@ -54,9 +56,7 @@ public class SingletonTest {
         for (int i = 0; i < 100; i++) {
             threadPoolExecutor.execute(task);
         }
-        if (Thread.activeCount()> 0) {
-            Thread.yield();
-        }
+        Thread.sleep(1000);
     }
 
     /**
@@ -69,10 +69,11 @@ public class SingletonTest {
         for (int i = 0; i < 100; i++) {
             threadPoolExecutor.execute(task);
         }
+        Thread.sleep(1000);
     }
 
     /**
-     * 饿汉式
+     * 枚举式
      * @throws Exception
      */
     @Test
@@ -81,6 +82,33 @@ public class SingletonTest {
         for (int i = 0; i < 100; i++) {
             threadPoolExecutor.execute(task);
         }
+        Thread.sleep(1000);
+    }
+
+    /**
+     * 类级内部类
+     * @throws Exception
+     */
+    @Test
+    public void getSingleton_6() throws Exception {
+        Task6 task = new Task6();
+        for (int i = 0; i < 100; i++) {
+            threadPoolExecutor.execute(task);
+        }
+        Thread.sleep(1000);
+    }
+
+    /**
+     * 有上限的多例模式
+     * @throws Exception
+     */
+    @Test
+    public void getSingleton_7() throws Exception {
+        Task7 task = new Task7();
+        for (int i = 0; i < 100; i++) {
+            threadPoolExecutor.execute(task);
+        }
+        Thread.sleep(1000);
     }
 
     class Task1 implements Runnable {
@@ -119,6 +147,22 @@ public class SingletonTest {
         @Override
         public void run() {
             Singleton5.singleton.say();
+        }
+    }
+
+    class Task6 implements Runnable {
+        @Override
+        public void run() {
+            Singleton6 singleton = Singleton6.getSingleton();
+            singleton.say();
+        }
+    }
+
+    class Task7 implements Runnable {
+        @Override
+        public void run() {
+            Singleton7 singleton = Singleton7.getSingleton();
+            singleton.say();
         }
     }
 }

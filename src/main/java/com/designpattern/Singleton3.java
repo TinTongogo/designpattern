@@ -10,7 +10,7 @@ public class Singleton3 {
     private static Singleton3 singleton = null;
 
     private Singleton3() {
-        System.out.println("生成对象》》》》》》》》》》》");
+        System.out.println("生成对象Singleton3》》》》》》》》》》》");
     }
 
     public static Singleton3 getSingleton() {
@@ -40,6 +40,6 @@ public class Singleton3 {
     }
 
     public void say() {
-        System.out.println("Singleton1.say : hello !");
+        System.out.println("Singleton1.say : hello Singleton3 !");
     }
 }
