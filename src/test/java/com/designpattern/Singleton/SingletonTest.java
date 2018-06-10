@@ -1,10 +1,12 @@
 package com.designpattern.Singleton;
 
 
-import com.designpattern.Singleton.*;
 import org.junit.Test;
 
-import java.util.concurrent.*;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by YYC on 2018/6/7.
@@ -19,10 +21,11 @@ public class SingletonTest {
      */
     private BlockingQueue blockingQueue = new SynchronousQueue<>();
     //首先构造一个线程池，SynchronousQueue，队列初始化容量为10。该线程池核心容量为100，最大容量为1000，线程存活时间为1毫秒。
-    private ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(100, 1000, 1 , TimeUnit.MILLISECONDS, blockingQueue);
+    private ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(100, 1000, 1, TimeUnit.MILLISECONDS, blockingQueue);
 
     /**
      * 懒汉式不加锁
+     *
      * @throws Exception
      */
     @Test
@@ -36,6 +39,7 @@ public class SingletonTest {
 
     /**
      * 懒汉式加锁
+     *
      * @throws Exception
      */
     @Test
@@ -49,6 +53,7 @@ public class SingletonTest {
 
     /**
      * 双重检查加锁
+     *
      * @throws Exception
      */
     @Test
@@ -62,6 +67,7 @@ public class SingletonTest {
 
     /**
      * 饿汉式
+     *
      * @throws Exception
      */
     @Test
@@ -75,6 +81,7 @@ public class SingletonTest {
 
     /**
      * 枚举式
+     *
      * @throws Exception
      */
     @Test
@@ -88,6 +95,7 @@ public class SingletonTest {
 
     /**
      * 类级内部类
+     *
      * @throws Exception
      */
     @Test
@@ -101,6 +109,7 @@ public class SingletonTest {
 
     /**
      * 有上限的多例模式
+     *
      * @throws Exception
      */
     @Test
