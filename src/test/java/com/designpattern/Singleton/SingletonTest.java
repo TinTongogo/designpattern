@@ -1,6 +1,7 @@
-package com.designpattern;
+package com.designpattern.Singleton;
 
 
+import com.designpattern.Singleton.*;
 import org.junit.Test;
 
 import java.util.concurrent.*;

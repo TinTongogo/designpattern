@@ -1,4 +1,4 @@
-package com.designpattern;
+package com.designpattern.Singleton;
 
 /**
  * 枚举实现单例

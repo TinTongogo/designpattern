@@ -1,4 +1,4 @@
-package com.designpattern;
+package com.designpattern.Singleton;
 
 /**
  * 懒汉式

@@ -1,4 +1,4 @@
-package com.designpattern;
+package com.designpattern.Singleton;
 
 /**
  * 双重检查加锁

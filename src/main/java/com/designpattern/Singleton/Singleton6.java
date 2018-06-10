@@ -1,4 +1,4 @@
-package com.designpattern;
+package com.designpattern.Singleton;
 
 /**
  * 类级内部类实现单例

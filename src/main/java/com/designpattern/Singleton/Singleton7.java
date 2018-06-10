@@ -1,4 +1,4 @@
-package com.designpattern;
+package com.designpattern.Singleton;
 
 import java.util.ArrayList;
 import java.util.List;
