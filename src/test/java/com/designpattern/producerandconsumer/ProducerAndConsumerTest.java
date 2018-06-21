@@ -47,7 +47,7 @@ public class ProducerAndConsumerTest {
         List<Product> list = new ArrayList<Product>();
         Producer producer = new Producer(list);
         Consumer consumer = new Consumer(list);
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 50000; i++) {
             threadPoolExecutor.execute(producer);
             threadPoolExecutor.execute(consumer);
         }
