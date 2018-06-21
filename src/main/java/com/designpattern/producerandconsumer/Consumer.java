@@ -4,6 +4,7 @@ import java.util.List;
 
 /**
  * 消费者
+ *
  * @author YYC
  * @date 2018/6/21
  */
@@ -16,17 +17,15 @@ public class Consumer implements Runnable {
 
     @Override
     public void run() {
-        if (list.size() == 0) {
-            try {
-                System.out.println("产品被全部消费，等待生产者生产！");
-                synchronized (list) {
+        synchronized (list) {
+            if (list.size() == 0) {
+                try {
+                    System.out.println("产品被全部消费，等待生产者生产！");
                     list.wait();
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } else {
-            synchronized (list) {
+            } else {
                 list.remove(0);
                 System.out.println("消费者消费一个产品");
                 list.notifyAll();
