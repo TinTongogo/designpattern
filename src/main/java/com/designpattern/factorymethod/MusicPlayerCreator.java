@@ -1,4 +1,4 @@
-package com.designpattern.FactoryMethod;
+package com.designpattern.factorymethod;
 
 /**
  * 抽象工厂

@@ -1,4 +1,4 @@
-package com.designpattern.Singleton;
+package com.designpattern.singleton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +47,6 @@ public class Singleton7 {
     }
 
     public void say() {
-        System.out.println("Singleton1.say : hello Singleton" + list.get(num).name + " !");
+        System.out.println("Singleton1.say : hello singleton" + list.get(num).name + " !");
     }
 }
