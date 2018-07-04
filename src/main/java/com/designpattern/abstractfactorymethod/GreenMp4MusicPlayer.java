@@ -5,6 +5,7 @@ package com.designpattern.abstractfactorymethod;
  */
 public class GreenMp4MusicPlayer extends AbstarctMp4MusicPlayer {
 
+    @Override
     public void getColor() {
         System.out.println("绿色Mp4!");
     }
