@@ -17,6 +17,6 @@ public enum Singleton5 {
      * 单例可以有自己的操作
      */
     public void say(){
-        System.out.println("Singleton1.say : hello Singleton5 !");
+        System.out.println("Singleton5.say : hello Singleton5 !");
     }
 }

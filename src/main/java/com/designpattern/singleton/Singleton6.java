@@ -26,6 +26,6 @@ public class Singleton6 {
     }
 
     public void say(){
-        System.out.println("Singleton1.say : hello Singleton6 !");
+        System.out.println("Singleton6.say : hello Singleton6 !");
     }
 }

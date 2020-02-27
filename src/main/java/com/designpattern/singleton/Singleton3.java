@@ -40,6 +40,6 @@ public class Singleton3 {
     }
 
     public void say() {
-        System.out.println("Singleton1.say : hello Singleton3 !");
+        System.out.println("Singleton3.say : hello Singleton3 !");
     }
 }

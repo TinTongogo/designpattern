@@ -47,6 +47,6 @@ public class Singleton7 {
     }
 
     public void say() {
-        System.out.println("Singleton1.say : hello singleton" + list.get(num).name + " !");
+        System.out.println("Singleton7.say : hello singleton" + list.get(num).name + " !");
     }
 }
